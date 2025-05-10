@@ -1,0 +1,171 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.projectInfo {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.infoGroup {
+    margin-bottom: 1.5rem;
+}
+
+.infoGroup:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.text {
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab:hover {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.activeTab {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.activeTab:hover {
+    background-color: #357abd;
+    color: white;
+}
+
+.tabContent {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.createTaskSection {
+    margin-bottom: 2rem;
+}
+
+.createTaskSection h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.taskList {
+    margin-top: 2rem;
+}
+
+.taskList h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.taskCard {
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.taskHeader h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0;
+}
+
+.taskStatus {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: #4a90e2;
+    color: white;
+}
+
+.taskDescription {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.taskMeta {
+    display: flex;
+    gap: 1.5rem;
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.projectButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.projectButton:hover {
+    background-color: #357abd;
+}
+  
+  

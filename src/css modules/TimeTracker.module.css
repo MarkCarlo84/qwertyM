@@ -1,0 +1,153 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #357abd;
+}
+
+.timeEntries {
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  color: #333;
+  margin: 0;
+}
+
+.totalTime {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+.entriesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entryItem {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-weight: 600;
+  color: #666;
+}
+
+.duration {
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+.description {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.noEntries {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.error {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 4px;
+  color: #dc2626;
+}
+
+.success {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #dcfce7;
+  border: 1px solid #22c55e;
+  border-radius: 4px;
+  color: #16a34a;
+} 

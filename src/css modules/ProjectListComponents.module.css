@@ -1,0 +1,93 @@
+/* ProjectListComponents.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black; /* Set the color to black */
+  }
+  
+  .projectTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .projectTable th, .projectTable td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .projectTable th {
+    background-color: #f4f4f4;
+  }
+  
+  .projectItem {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .projectLink {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .projectLink:hover {
+    text-decoration: underline;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .updateLink, .deleteLink, .createTaskLink {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .updateLink {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .updateLink:hover {
+    background-color: #1a252f;
+  }
+  
+  
+  .deleteLink {
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .deleteLink:hover {
+    background-color: #c82333;
+  }
+  
+  .createTaskLink {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .createTaskLink:hover {
+    background-color: #218838;
+  }
+  

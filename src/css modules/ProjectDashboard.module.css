@@ -1,0 +1,520 @@
+/* ProjectDashboard.module.css */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Fixed height instead of min-height */
+  background-color: #f8f9fa;
+  overflow: hidden; /* Prevent scrolling on the container */
+}
+
+.mainContent {
+  flex: 1;
+  padding: 0.75rem; /* Further reduced from 1rem */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow scrolling within the content area */
+}
+
+.pageTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Further reduced from 0.75rem */
+}
+
+.pageTitle h1 {
+  font-size: 1.5rem; /* Reduced from 1.8rem */
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem; /* Reduced from 0.75rem 1.25rem */
+  font-size: 0.85rem; /* Reduced from 0.9rem */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+.createButton:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+}
+
+.controlsSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem; /* Further reduced from 0.75rem */
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  position: relative;
+  flex: 1;
+  min-width: 200px; /* Reduced from 250px */
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem; /* Reduced from 0.75rem 1rem 0.75rem 2.5rem */
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.85rem; /* Reduced from 0.9rem */
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.filterControls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterSection, .sortSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterIcon {
+  color: #6c757d;
+}
+
+.filterSelect, .sortSelect {
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem; /* Reduced from 0.75rem 2rem 0.75rem 1rem */
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.85rem; /* Reduced from 0.9rem */
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath fill='%236c757d' d='M0 0l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center; /* Reduced from 1rem */
+  background-size: 8px 4px;
+  min-width: 120px; /* Reduced from 150px */
+}
+
+.filterSelect:focus, .sortSelect:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.sortOrderButton {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  width: 30px; /* Reduced from 36px */
+  height: 30px; /* Reduced from 36px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.sortOrderButton:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.viewModeSection {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.viewModeButton {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  width: 30px; /* Reduced from 36px */
+  height: 30px; /* Reduced from 36px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewModeButton.active {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.gridIcon, .listIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.gridIcon::before, .gridIcon::after, .listIcon::before, .listIcon::after {
+  content: '';
+  position: absolute;
+  background-color: #6c757d;
+}
+
+.gridIcon::before {
+  width: 3px;
+  height: 16px;
+  left: 2px;
+}
+
+.gridIcon::after {
+  width: 3px;
+  height: 16px;
+  right: 2px;
+}
+
+.listIcon::before {
+  width: 16px;
+  height: 3px;
+  top: 2px;
+}
+
+.listIcon::after {
+  width: 16px;
+  height: 3px;
+  bottom: 2px;
+}
+
+/* Project List Styles */
+.projectList {
+  display: grid;
+  gap: 0.5rem; /* Further reduced from 0.75rem */
+  margin-top: 0.25rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 60px - 18rem); /* Further reduced height to move footer up */
+  padding-bottom: 0.5rem; /* Further reduced from 0.75rem */
+}
+
+.gridView {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Further reduced from 250px */
+}
+
+.listView {
+  grid-template-columns: 1fr;
+}
+
+.projectCard {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Further reduced shadow */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e9ecef;
+}
+
+.projectCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.projectCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0.75rem 0.35rem; /* Further reduced padding */
+}
+
+.projectCardHeader h3 {
+  margin: 0;
+  font-size: 1rem; /* Reduced from 1.1rem */
+  font-weight: 600;
+  color: #212529;
+}
+
+.projectActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.editButton, .deleteButton {
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.editButton {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.editButton:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.deleteButton {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.deleteButton:hover {
+  background-color: #fecaca;
+  color: #b91c1c;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.projectDescription {
+  padding: 0 0.75rem 0.5rem; /* Further reduced padding */
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.85rem;
+  line-height: 1.3; /* Further reduced from 1.4 */
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0.75rem; /* Further reduced padding */
+  border-top: 1px solid #f1f3f5;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.projectStatus, .projectDate {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem; /* Reduced from 0.5rem */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
+  color: #6c757d;
+}
+
+.statusIconCompleted {
+  color: #10b981;
+}
+
+.statusIconInProgress {
+  color: #3b82f6;
+}
+
+.statusIconPending {
+  color: #f59e0b;
+}
+
+.statusText {
+  font-weight: 500;
+}
+
+.statusCompleted {
+  color: #10b981;
+}
+
+.statusIn_progress {
+  color: #3b82f6;
+}
+
+.statusPending {
+  color: #f59e0b;
+}
+
+.projectFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem; /* Further reduced padding */
+}
+
+.projectAssignee {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem; /* Reduced from 0.5rem */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
+  color: #6c757d;
+}
+
+.viewDetailsButton {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem; /* Reduced from 0.5rem 0.75rem */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewDetailsButton:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #4f46e5;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0; /* Further reduced from 2rem */
+  text-align: center;
+}
+
+.emptyStateIcon {
+  width: 40px; /* Further reduced from 48px */
+  height: 40px; /* Further reduced from 48px */
+  margin-bottom: 0.75rem; /* Further reduced from 1rem */
+}
+
+.emptyState h3 {
+  margin: 0 0 0.25rem; /* Further reduced from 0.35rem */
+}
+
+.emptyState p {
+  margin: 0 0 0.75rem; /* Further reduced from 1rem */
+  max-width: 300px; /* Further reduced from 350px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .controlsSection {
+    flex-direction: column;
+  }
+  
+  .searchBar, .filterControls {
+    width: 100%;
+  }
+  
+  .filterControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterSection, .sortSection, .viewModeSection {
+    width: 100%;
+  }
+  
+  .filterSelect, .sortSelect {
+    width: 100%;
+  }
+  
+  .gridView {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  z-index: 10;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #495057;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdownIcon {
+  margin-right: 0.5rem;
+  width: 14px;
+}
+
+.dropdownItem:last-child {
+  color: #dc2626;
+}
+
+.dropdownItem:last-child:hover {
+  background-color: #fee2e2;
+}
